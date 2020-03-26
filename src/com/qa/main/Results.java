@@ -16,7 +16,12 @@ public class Results
 		System.out.println("Your total marks: " + totalMarks);
 		
 		percentageOfMarks = totalMarks * 100 / 450;
-		System.out.println(percentageOfMarks);
+		System.out.println("Your average total: " + percentageOfMarks);
+		
+		if (percentageOfMarks < 60.00)
+		{
+			System.out.println("You have Failed the tests overall");
+		}
 	}
 
 }
