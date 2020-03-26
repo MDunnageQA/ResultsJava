@@ -3,10 +3,11 @@ package com.qa.main;
 public class Results 
 {
 	public double chemistryMark = 123.00;
-	public double physicsMark = 131.00;
+	public double physicsMark = 59.00;
 	public double biologyMark = 97.00;
 	public double totalMarks = chemistryMark + physicsMark + biologyMark;
 	public double percentageOfMarks;
+	public int failCounter = 0;
 	
 	public void showStudentsMarks()
 	{
@@ -26,7 +27,24 @@ public class Results
 		if (chemistryMark < 60.00 || physicsMark < 60.00 || biologyMark < 60.00)
 		{
 			System.out.println("You have Failed the tests overall");
+			
+			if (chemistryMark < 60.00)
+			{
+				failCounter++;
+			}
+			
+			if (physicsMark < 60.00) 
+			{
+				failCounter++;
+			}
+			
+			if (biologyMark < 60.00)
+			{
+				failCounter++;
+			}
 		}
+		
+		System.out.println("You have failed: " + failCounter + " course(s)");
 	}
 
 }
