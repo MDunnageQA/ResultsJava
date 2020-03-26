@@ -22,6 +22,11 @@ public class Results
 		{
 			System.out.println("You have Failed the tests overall");
 		}
+		
+		if (chemistryMark < 60.00 || physicsMark < 60.00 || biologyMark < 60.00)
+		{
+			System.out.println("You have Failed the tests overall");
+		}
 	}
 
 }
